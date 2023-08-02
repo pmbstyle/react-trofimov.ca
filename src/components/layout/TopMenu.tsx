@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slava from '../assets/img/slava.png'
+import Slava from '../../assets/img/slava.png'
 
 type TopMenuProps = {
     currentWindow: string;

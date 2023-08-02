@@ -3,8 +3,9 @@ import Tux from './assets/img/tux.svg'
 import Cactus from './assets/img/cactus.png'
 import Controller from './assets/img/controller.png'
 import Keyboard from './assets/img/keyboard.png'
-import Welcome from './components/Welcome'
-import TopMenu from './components/TopMenu'
+import Welcome from './components/layout/Welcome'
+import TopMenu from './components/layout/TopMenu'
+import Resume from './components/resume/Resume'
 
 function App() {
     const [currentWindow, setCurrentWindow] = useState('Slava Trofimov')
@@ -14,6 +15,21 @@ function App() {
     const [showGame, setShowGame] = useState(false)
     const [showTerminal, setShowTerminal] = useState(false)
     const [showResume, setShowResume] = useState(false)
+
+    const desktopItems = [
+        {
+            name: 'terminal',
+            title: 'Terminal'
+        },
+        {
+            name: 'game',
+            title: 'Game'
+        },
+        {
+            name: 'resume',
+            title: 'Resume'
+        },
+    ]
 
 
     const switchWindow = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -46,13 +62,35 @@ function App() {
                 setShowDesktop(true)
                 setShowResume(false)
                 setShowTerminal(false)
+                setShowHelloDialog(false)
                 setCurrentWindow('Slava Trofimov')
                 break
         }
     }
 
-    const hideHelloDialog = (event: React.MouseEvent<HTMLDivElement>) => {
-        setShowHelloDialog(false)
+    function DialogWindow(): JSX.Element {
+        const hideHelloDialog = (event: React.MouseEvent<HTMLDivElement>) => {
+            setShowHelloDialog(false)
+        }
+        return (
+            <div className="desktop-dialog hide-mobile">
+                <div className="close-dialog" onClick={hideHelloDialog}>x</div>
+                <div className="desktop-dialog__content">
+                    <h3>Hello!</h3>
+                    <p>My name is Slava Trofimov and I am a Web developer.</p>
+                    <p>This website represents information about me in several different ways:</p>
+                    <ul>
+                        <li>as a simple terminal application where you will need to type in commands to get content on a specific topic about me</li>
+                        <li>as a small game where you can walk around and chat with NPCs, etc.</li>
+                        <li>old-fashion resume (downloadable)</li>
+                    </ul>
+                    <p></p>
+                    <p>Source code for this website you can find on my <a href="https://github.com/pmbstyle">Git Profile</a> page.</p>
+                    <p>Feel free to contact me if you have any questions or offers.<br/>
+                    Thank you for visiting, have a nice day!</p>
+                </div>
+            </div>
+        )
     }
 
     useEffect(() => {
@@ -75,43 +113,18 @@ function App() {
                     <div className="monitor-screen flex bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative">
                         <TopMenu currentWindow={currentWindow}/>
                         { showWelcome && <Welcome/> }
-
                         { showDesktop && (
                             <div className="desktop absolute z-10 w-full h-full">
-                                <div className="desktop-item item-terminal hide-mobile" data-name="terminal" onClick={switchWindow}>
-                                    <div className="icon"></div>
-                                    <div className="name">Terminal</div>
-                                </div>
-                                <div className="desktop-item item-game hide-mobile" data-name="game" onClick={switchWindow}>
-                                    <div className="icon"></div>
-                                    <div className="name">Game</div>
-                                </div>
-                                <div className="desktop-item item-resume" data-name="resume" onClick={switchWindow}>
-                                    <div className="icon"></div>
-                                    <div className="name">Resume</div>
-                                </div>
-                                { showHelloDialog && (
-                                    <div className="desktop-dialog hide-mobile">
-                                        <div className="close-dialog" onClick={hideHelloDialog}>x</div>
-                                        <div className="desktop-dialog__content">
-                                            <h3>Hello!</h3>
-                                            <p>My name is Slava Trofimov and I am a Web developer.</p>
-                                            <p>This website represents information about me in several different ways:</p>
-                                            <ul>
-                                                <li>as a simple terminal application where you will need to type in commands to get content on a specific topic about me</li>
-                                                <li>as a small game where you can walk around and chat with NPCs, etc.</li>
-                                                <li>old-fashion resume (downloadable)</li>
-                                            </ul>
-                                            <p></p>
-                                            <p>Source code for this website you can find on my <a href="https://github.com/pmbstyle">Git Profile</a> page.</p>
-                                            <p>Feel free to contact me if you have any questions or offers.<br/>
-                                            Thank you for visiting, have a nice day!</p>
-                                        </div>
+                                {desktopItems.map((item, index) => (
+                                    <div key={index} className={'desktop-item item-'+item.name} data-name={item.name} onClick={switchWindow}>
+                                        <div className="icon"></div>
+                                        <div className="name">{item.title}</div>
                                     </div>
-                                )}
+                                ))}
+                                { showHelloDialog && <DialogWindow/>}
                             </div>
                         )}
-
+                        { showResume && <Resume switchWindow={switchWindow}/> }
                     </div>
                     <div className="monitor-screen-bottom bg-gradient-to-t from-slate-300 to-slate-200">
                         <img src={Tux} className="tux"/>
