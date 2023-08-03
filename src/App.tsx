@@ -1,11 +1,11 @@
-import { useState, useEffect, MouseEvent } from 'react'
+import { useState, useEffect } from 'react'
 import Tux from './assets/img/tux.svg'
 import Cactus from './assets/img/cactus.png'
 import Controller from './assets/img/controller.png'
 import Keyboard from './assets/img/keyboard.png'
-import Welcome from './components/layout/Welcome'
 import TopMenu from './components/layout/TopMenu'
 import Resume from './components/resume/Resume'
+import Game from './components/game/Game'
 
 function App() {
     const [currentWindow, setCurrentWindow] = useState('Slava Trofimov')
@@ -68,8 +68,16 @@ function App() {
         }
     }
 
+    function Welcome(): JSX.Element {
+        return (
+            <div className="welcome absolute z-10 text-8xl text-white text-bold w-full h-full flex justify-center items-center opacity-80">
+                Welcome
+            </div>
+        );
+    }
+
     function DialogWindow(): JSX.Element {
-        const hideHelloDialog = (event: React.MouseEvent<HTMLDivElement>) => {
+        const hideHelloDialog = () => {
             setShowHelloDialog(false)
         }
         return (
@@ -103,8 +111,7 @@ function App() {
     }, []);
 
     return (
-        <>
-            <main className="h-full w-full h-full relative">
+        <main className="h-full w-full h-full relative">
             <div className="container mx-auto flex flex-col h-full justify-center relative z-20">
                 <div id="monitor" className="relative">
                     <img src={Cactus} className="cactus" />
@@ -124,6 +131,7 @@ function App() {
                                 { showHelloDialog && <DialogWindow/>}
                             </div>
                         )}
+                        { showGame && <Game switchWindow={switchWindow}/> }
                         { showResume && <Resume switchWindow={switchWindow}/> }
                     </div>
                     <div className="monitor-screen-bottom bg-gradient-to-t from-slate-300 to-slate-200">
@@ -132,10 +140,9 @@ function App() {
                     <div className="monitor-stand"></div>
                     <div className="monitor-base drop-shadow-xl"></div>
                 </div>
-                </div>
-                <div className="table absolute z-10 w-full bg-gradient-to-tr from-gray-900 to-gray-800"></div>
-            </main>
-        </>
+            </div>
+            <div className="table absolute z-10 w-full bg-gradient-to-tr from-gray-900 to-gray-800"></div>
+        </main>
     )
 }
 

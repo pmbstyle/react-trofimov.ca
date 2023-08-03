@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Slava from '../../assets/img/slava.png'
 
 type TopMenuProps = {
@@ -6,8 +6,8 @@ type TopMenuProps = {
 };
 
 const Clock = () => {
-    const [time, setTime] = React.useState(new Date().toLocaleTimeString());
-    React.useEffect(() => {
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+    useEffect(() => {
         const interval = setInterval(() => {
             setTime(new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }));
         }, 1000);

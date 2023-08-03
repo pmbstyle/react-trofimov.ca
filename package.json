@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "phaser": "^3.60.0",
+    "phaser-matter-collision-plugin": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-perfect-scrollbar": "^1.5.8"
   },
   "devDependencies": {
+    "@types/node": "^20.4.6",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

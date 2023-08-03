@@ -1,9 +1,9 @@
-import React, { MouseEvent } from "react";
+import React from "react"
 import 'react-perfect-scrollbar/dist/css/styles.css'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import pdf from '../../assets/Slava_Trofimov-Senior_Front_End_Developer.pdf'
+import pdf from '../../assets/Slava_Trofimov_Resume(Senior_Front-end_Developer).pdf'
 
-interface ChildProps {
+interface GameProps {
     switchWindow: Function
 }
 
@@ -78,8 +78,8 @@ const education = [
 ]
 const skills = [
     'JavaScript (7 years)',
-    'Vue.js (5 years)',
-    'Nuxt.js (3 years)',
+    'Vue.js / Nuxt.js (5 years)',
+    'React.js (2 years)',
     'Laravel (4 years)',
     'Node.js (3 years)',
     'TypeScript (2 years)',
@@ -94,10 +94,13 @@ const skills = [
     'TailwindCss (3 years)',
     'MySQL (5 years)',
     'GitHub (6 years)',
-    'Docker (4 years)'
+    'Docker (4 years)',
+    'Webpack (4 years)',
+    'Vite (2 year)',
+    'Gulp (3 years)'
 ]
 
-class Resume extends React.Component<ChildProps> {
+class Resume extends React.Component<GameProps> {
     render() {
         return (
             <div className="mockup-window border bg-base-300 flex-1 mt-10 mb-5 ml-5 mr-5 drop-shadow-md absolute z-20 show">
@@ -115,15 +118,14 @@ class Resume extends React.Component<ChildProps> {
                             <a href="mailto:slava@trofimov.ca">slava@trofimov.ca</a><br/>
                             <a href="tel:2899808683">+1(289)980-8683</a></p>
                             <section>
-                                <p>I'm working in the web development industry for more than 12 years and am familiar with all aspects
-                                of a website/app development cycle, from initial analysis and planning, creating wireframes to
-                                production deployment.</p>
-                                <p>I have strong JavaScript, Vue.js, REST, CSS/SCSS, and HTML5 skills. For the last several years I've
-                                gained wide experience with Laravel and PHP in general and worked on many Laravel+Vue.js/Nuxt.js
-                                projects as a Lead developer.</p>
-                                <p>Have wide experience with MySQL, WordPress, Opencart, and Electron.js.</p>
-                                <p>I feel confident working with technologies like Git, Docker, Figma, Jira / ClickUp, Slack, etc.</p>
-                                <p>Always seeking skill improvement and better practices.</p>
+                                <p>Working in the web development industry for more than 12 years and am familiar with all aspects of a
+                                website/app development cycle, from initial analysis and planning, creating wireframes to production
+                                deployment.</p>
+                                <p>Have strong JavaScript, Vue.js, REST and HTML5/SCSS skills. For the last several years gained wide
+                                experience with Laravel and PHP in general and worked on many Laravel+Vue.js/Nuxt.js projects as a Full
+                                stack developer. Have experience with React.js, MySQL, WordPress, Opencart, and Electron.js.
+                                Feel confident working with technologies like Git, Docker, Figma, Jira / ClickUp, Slack, etc.
+                                Always seeking skill improvement and better practices.</p>
                             </section>
 
                             <section>
