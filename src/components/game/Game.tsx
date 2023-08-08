@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import * as Phaser from 'phaser'
 import PhaserMatterCollisionPlugin from "phaser-matter-collision-plugin"
 import MainScene from "./scenes/MainScene"
-import Deialogue from "./Dialogue"
 import Dialogue from './Dialogue'
 
 interface GameProps {
@@ -51,21 +50,20 @@ const GameRenderer = () => {
     return <div id="game" className="game w-full overflow-hidden"></div>
 }
 
-const Game = (): JSX.Element => {
+const Game = ({switchWindow}:GameProps): JSX.Element => {
     const [activeDialogue, setActiveDialogue] = useState('')
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setActiveDialogue(event.target.value)
     }
     const toggleDialogue = (type:string) => {
-        console.log('type recieved',type)
         if(typeof type == undefined) return
         setActiveDialogue(type)
     }
     return (
         <div className="game mockup-window border bg-base-300 flex-1 mt-10 mb-5 ml-5 mr-5 drop-shadow-md absolute z-20 show">
             <div className="window-header">
-                <div className="close-window" data-name="desktop" onClick={(event) => this.props.switchWindow(event)}>x</div>
-                <div className="minimize-window" data-name="desktop" onClick={(event) => this.props.switchWindow(event)}>–</div>
+                <div className="close-window" data-name="desktop" onClick={(event) => switchWindow(event)}>x</div>
+                <div className="minimize-window" data-name="desktop" onClick={(event) => switchWindow(event)}>–</div>
                 <div className="maximize-window">□</div>
             </div>
             <div className="flex justify-left bg-base-200 game-wrapper relative">
