@@ -6,6 +6,7 @@ import Keyboard from './assets/img/keyboard.png'
 import TopMenu from './components/layout/TopMenu'
 import Resume from './components/resume/Resume'
 import Game from './components/game/Game'
+import Terminal from './components/terminal/Terminal'
 
 function App() {
     const [currentWindow, setCurrentWindow] = useState('Slava Trofimov')
@@ -133,6 +134,7 @@ function App() {
                         )}
                         { showGame && <Game switchWindow={switchWindow}/> }
                         { showResume && <Resume switchWindow={switchWindow}/> }
+                        { showTerminal && <Terminal switchWindow={switchWindow}/> }
                     </div>
                     <div className="monitor-screen-bottom bg-gradient-to-t from-slate-300 to-slate-200">
                         <img src={Tux} className="tux"/>
