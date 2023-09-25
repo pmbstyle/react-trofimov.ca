@@ -1,7 +1,7 @@
 import React from "react"
 import 'react-perfect-scrollbar/dist/css/styles.css'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import pdf from '../../assets/Slava_Trofimov-Senior_Front_End_Developer.pdf'
+import pdf from '../../assets/Slava_Trofimov_Front_End(Full_Stack)_Developer.pdf'
 
 interface ResumeProps {
     switchWindow: Function
@@ -13,12 +13,10 @@ const experience = [
         company: 'Codepxl - Toronto, ON',
         date: 'January 2019 to Present',
         description: [
-            'Teamed on user-centric design strategy in translation of UX and business requirements into coded solutions.',
-            'Formed a team for a particular project needs, estimated and planned development process close with Product Manager.',
-            'Coded using Vue.js/React.js to develop features for both mobile and desktop platforms.',
-            'Transformed native applications designs into desktop and mobile-friendly SPA/SSR products.',
-            'Produced websites based on Laravel or WordPress compatible with multiple browsers and platforms.',
-            'Improved tools to boost user interaction and deliver design versatility.'
+            'Proficiently employed Vue.js, Nuxt.js, Laravel, WordPress, jQuery, and Vanilla JavaScript for Front End and Full Stack development.',
+            'Skillfully translated Figma designs into responsive web interfaces, utilizing HTML5, CSS3 (SASS), and TailwindCSS/Bootstrap.',
+            'Demonstrated expertise in building Single Page and Progressive Web Applications while actively contributing to project planning, code structuring, and maintaining legacy code.',
+            'Successfully managed a wide range of projects, from small-scale WordPress websites to extensive social networks and multi-application ecosystems.'
         ]
     },
     {
@@ -26,12 +24,9 @@ const experience = [
         company: 'EvolutionInDesignZ - Toronto, ON',
         date: 'May 2018 to December 2018',
         description: [
-            'Coded using HTML, CSS/SCSS and JavaScript(Vue.js) to develop features for both mobile and desktop platforms.',
-            'Contributed to projects within Scrum project management environments.',
-            'Collaborated with stakeholders during development processes to confirm creative proposals and design best practices.',
-            'Worked cooperatively with client services, sales and design team in deadline-driven environment.',
-            'Designed and updated layouts to meet usability and performance requirements.',
-            'Produced websites compatible with multiple browsers.'
+            'Spearheaded various custom projects spanning across Laravel, WordPress, and Opencart, encompassing diverse industries such as real estate, education, non-profit, large data, and thin-client solutions.',
+            'Translated Figma and Sketch designs into cross-platform accessible, SEO-friendly front-end code using a skill set that included HTML5, SASS, JavaScript, Vue.js, Laravel Blade, jQuery, and Bootstrap.',
+            'Delivered exceptional results by seamlessly implementing these projects, ensuring they met accessibility standards and SEO requirements while providing top-notch user experiences.'
         ]
     },
     {
@@ -39,10 +34,9 @@ const experience = [
         company: 'Electrolight Enterprises - Toronto, ON',
         date: 'August 2017 to May 2018',
         description: [
-            'Provided front-end website development using WordPress, OpenCart, and other editing software.',
-            'Coded websites using HTML, CSS, JavaScript, and jQuery languages and libraries.',
-            'Implemented content management and security resource tutorials to assist end-user training.',
-            'Multi-tasked across multiple functions and roles to meet deadlines and organizational expectations.'
+            'Led the development and ongoing maintenance of custom corporate websites built on WordPress and Opencart, employing a tech stack featuring HTML5, CSS3, JavaScript, and jQuery.',
+            'Streamlined operations by seamlessly integrating third-party APIs, transforming mockups into user-friendly interfaces, and enhancing SEO and web accessibility.',
+            'Innovatively contributed to end-user training by developing and implementing content management systems and security resource tutorials, empowering teams to utilize web resources efficiently and securely.'
         ]
     },
     {
@@ -50,12 +44,10 @@ const experience = [
         company: 'iMoan.ru - Moscow',
         date: 'August 2015 to July 2017',
         description: [
-            'Collaborated with stakeholders during development processes to confirm creative proposals and design best practices.',
-            'Researched emerging web technologies and trends for possible incorporation into sites.',
-            'Worked cooperatively with client services, sales and design team in deadline-driven environment.',
-            'Produced websites compatible with multiple browsers',
-            'Tested web-based product functionality and delivered iterations to customer.',
-            'Teamed on user-centric design strategy in translation of UX and business requirements into coded solutions.'
+            'Collaborated seamlessly with cross-functional teams including client services, sales, and design, ensuring project success in a fast-paced, deadline-driven environment.',
+            'Successfully crafted and launched e-commerce websites on Opencart and Django framework, utilizing a technology stack that encompassed HTML5, LESS, jQuery, PHP, and Python.',
+            'Designed and constructed impactful landing pages and corporate resources to enhance the online presence of the company.',
+            'Achieved significant SEO improvements, resulting in remarkable outcomes, and enhanced overall UI/UX to elevate user experiences.'
         ]
     },
     {
@@ -63,12 +55,10 @@ const experience = [
         company: 'Web Solution Ltd. - Moscow',
         date: 'March 2013 to August 2015',
         description: [
-            'Coded websites using HTML, CSS, JavaScript, and jQuery languages and libraries.',
-            'Planned website development, converting mockups into usable web presence with HTML, JavaScript, AJAX, and JSON coding.',
-            'Implemented changes and integrated requested elements to streamline business operations.',
-            'Validated third-party code to comply with internal standards and technical requirements.',
-            'Oversaw back-end development using PHP to maintain website integrity.',
-            'Developed technical solutions required to accommodate specific user-facing assets'
+            'Spearheaded the design and development of a diverse portfolio of websites, ranging from small-scale WordPress/Joomla-based corporate sites to expansive e-commerce solutions.',
+            'Proficiently implemented front-end interfaces using HTML/CSS, jQuery, Bootstrap, and PHP to ensure seamless user experiences.',
+            'Conducted market research and successfully integrated SEO best practices, resulting in improved online visibility and search engine rankings.',
+            'Fostered strong client relationships by collaborating closely with end clients, facilitating the creation of modern and highly productive web applications.'
         ]
     },
     {
@@ -76,9 +66,8 @@ const experience = [
         company: 'Giftery corp. - Moscow',
         date: 'February 2012 to March 2013',
         description: [
-            'Coded using HTML, CSS, Python (DjangoFramework) and JavaScript to develop features for both mobile and desktop platforms.',
-            'Researched emerging web technologies and trends for possible incorporation into sites.',
-            'Produced websites compatible with multiple browsers.'
+            'Collaborated on corporate websites with Django(Python) backend, applying HTML/CSS, jQuery, and JavaScript to create cross-browser compatible and user-friendly user interfaces.',
+            'Established a strong partnership with designers and the development team, actively contributing to the incorporation of modern best practices in website development, ensuring cutting-edge results.'
         ]
     },
     {
@@ -86,27 +75,24 @@ const experience = [
         company: 'Predestination.ru - Moscow',
         date: 'January 2011 to February 2012',
         description: [
-            'Coded websites using HTML, CSS, JavaScript, and jQuery languages and libraries.',
-            'Provided front-end website development using WordPress.',
-            'Oversaw back-end development using PHP to maintain website integrity.',
-            'Adhered to SEO best practices while designing sites.',
-            'Multi-tasked across multiple functions and roles to meet deadlines and organizational expectations.'
+            'Contributed to the development of multiple corporate websites using WordPress, skillfully utilizing HTML/CSS, jQuery, JavaScript, and PHP to ensure optimal functionality and aesthetics.',
+            "Took charge of the design and development of impactful landing pages and product websites, enhancing the company's online presence and user engagement."
         ]
     }
 ]
 const profile = [
-    'HTML & CSS styling',
-    'JavaScript / TypeScript w/without frameworks',
-    'JavaScript Frameworks and Libraries (Vue.js, Nuxt.js, React.js, jQuery, etc.)',
-    'Single Page Applications, Server Side Rendering, Progressive Web Apps',
-    'CSS Preprocessors and Template engines (SCSS, PUG, etc.)',
-    'Development and interacting with RESTful Services and APIs',
-    'Cross-Browser / Cross-Platform Development',
-    'Web Accessibility and SEO best practices',
-    'PHP development (Laravel, WordPress, Opencart, etc.)',
-    'Prototyping and Proof-of-concept development',
-    'Git/Version Control, Pull requests and code reviews',
-    'Mentoring jr. developers and interns'
+    'HTML5 & CSS3 for precise styling',
+    'JavaScript/TypeScript (with or without frameworks)',
+    'JavaScript Frameworks (Vue.js, Nuxt.js), Libraries (React.js, jQuery)',
+    'Mobile-first, pixel-perfect styling',
+    'SPA, PWA, SSR development',
+    'CSS Preprocessors (SASS, LESS) and Template Engines (Laravel Blade, PUG)',
+    'RESTful Service and Third-Party API interaction',
+    'Unit Testing (Jest), Debugging, Application Maintenance',
+    'Desktop App Development (Electron.js)',
+    'Web Accessibility (WCAG) and SEO Best Practices',
+    'Full Stack Development (Laravel, WordPress, Node.js)',
+    'Git/Version Control, Pull Requests, Code Reviews'
 ]
 const education = [
     {
@@ -157,14 +143,12 @@ class Resume extends React.Component<ResumeProps> {
                             <a href="mailto:slava@trofimov.ca">slava@trofimov.ca</a><br/>
                             <a href="tel:2899808683">+1(289)980-8683</a></p>
                             <section>
-                                <p>Working in the web development industry for more than 12 years and am familiar with all aspects of a
-                                website/app development cycle, from initial analysis and planning, creating wireframes to production
-                                deployment.</p>
-                                <p>Have strong JavaScript, Vue.js, REST and HTML5/SCSS skills. For the last several years gained wide
-                                experience with Laravel and PHP in general and worked on many Laravel+Vue.js/Nuxt.js projects as a Full
-                                stack developer. Have experience with React.js, MySQL, WordPress, Opencart, and Electron.js.
-                                Feel confident working with technologies like Git, Docker, Figma, Jira / ClickUp, Slack, etc.
-                                Always seeking skill improvement and better practices.</p>
+                                <p>Front End Developer with strong expertise in JavaScript, Vue.js, REST, and HTML5/SCSS.
+                                Bring a Full Stack skill set, having worked extensively with Laravel and PHP, contributing to numerous
+                                Laravel+Vue.js/Nuxt.js projects. I'm also proficient in React.js, WordPress, Opencart, and Electron.js.
+                                Well-versed in essential development tools like Git and Docker and have experience with collaboration
+                                platforms such as Figma, Jira/ClickUp, and Slack. Dedication to ongoing enhancement and a knack for
+                                resolving challenges add value to any development environment.</p>
                             </section>
 
                             <section>

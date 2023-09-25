@@ -17,7 +17,7 @@ interface Dictionary<T> {
 const content:Dictionary<string> = {
 	statue: `<p><strong>Hello traveler!</strong></p>
 	<p>Here is a letter that I found in that box:</p>
-	<p>"My name is Slava Trofimov, I'm a Full StackDeveloper from Toronto, Canada.</p>
+	<p>"My name is Slava Trofimov, I'm a Web Developer from Toronto, Canada.</p>
 	<p>I have more than 12 years of experience as a Front End Developer and 2+ years as a Full Stack Developer.<br/>
 	Experienced in several high-traffic projects from educational to real-time data management and social networks.</p>
 	<p>I specialize in all aspects of web development from basic HTML/CSS/JS coding to creating full-scale web applications with rich REST API(PHP/NodeJs).</br>

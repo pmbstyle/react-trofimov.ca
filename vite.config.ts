@@ -20,4 +20,7 @@ export default defineConfig({
         .use(highlightjs),
     }),
   ],
+  build: {
+    assetsInlineLimit: 0
+  }
 })
