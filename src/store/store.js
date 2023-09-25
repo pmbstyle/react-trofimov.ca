@@ -1,8 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit'
-import terminalReducer from './terminal'
+import { configureStore } from "@reduxjs/toolkit";
+import terminalReducer from "./terminalSlice"
 
-export default configureStore({
-    reducer: {
-        terminal: terminalReducer
-    }
+export const store = configureStore({
+    reducer: terminalReducer
 })

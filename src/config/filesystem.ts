@@ -1,7 +1,7 @@
-import { html as about } from "@/config/about.md"
-import { html as skills } from "@/config/skills.md"
-import { html as contact } from "@/config/contact.md"
-import { html as experience } from "@/config/experience.md"
+import { html as about } from "./about.md"
+import { html as skills } from "./skills.md"
+import { html as contact } from "./contact.md"
+import { html as experience } from "./experience.md"
 
 export interface FileType {
 	type: "folder" | "file"
