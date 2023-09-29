@@ -68,8 +68,8 @@ const Game = ({switchWindow}:GameProps): JSX.Element => {
             </div>
             <div className="flex justify-left bg-base-200 game-wrapper relative">
                 <div className="game-controls absolute mt-5 ml-5 text-left">
-                    <p>Movement: [W], [A], [S], [D]</p>
-                    <p>Action: [SPACEBAR]</p>
+                    <p>Movement: <kbd className="kbd">W</kbd> <kbd className="kbd">A</kbd> <kbd className="kbd">S</kbd> <kbd className="kbd">D</kbd></p>
+                    <p>Action: <kbd className="kbd">SPACE</kbd></p>
                 </div>
                 <GameRenderer />
                 { activeDialogue.length > 0 && <Dialogue type={activeDialogue} toggleDialogue={toggleDialogue}/> }
